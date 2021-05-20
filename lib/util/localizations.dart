@@ -16,19 +16,30 @@ class MyAppLocalizations {
           'Euro Exchange is an Api that helps you to get information about the '
               'current value of different currencies around the world! '
               'Those values are obtained from the European Central Bank. '
-              'Se more at the link'
+              'Se more at the link',
+      "homeMenuLogin": "Login",
+      "homeMenuAbout": "About"
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
           'informações à respeito de valores de diferentes moedas ao redor do mundo! \n'
           'Esses valores são obtidos do Banco Central Europeu (European Central Bank). \n'
-          'Veja mais no link'
+          'Veja mais no link',
+      "homeMenuLogin": "Entrar",
+      "homeMenuAbout": "Sobre"
     }
   };
 
 // GETTERS
   String get apiPresentation =>
-      _localizedValues[locale.languageCode]?['apiPresentation'] ?? "Value Error";
+      _localizedValues[locale.languageCode]?['apiPresentation'] ??
+      "Value Error";
+
+  String get homeMenuLogin =>
+      _localizedValues[locale.languageCode]?['homeMenuLogin'] ?? "Value Error";
+
+  String get homeMenuAbout =>
+      _localizedValues[locale.languageCode]?['homeMenuAbout'] ?? "Value Error";
 }
 
 class MyAppLocalizationsDelegate
