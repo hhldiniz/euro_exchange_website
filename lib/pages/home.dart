@@ -1,8 +1,10 @@
+import 'package:euro_exchange_api_website/pages/login.dart';
 import 'package:euro_exchange_api_website/util/localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
@@ -22,7 +24,9 @@ class _HomeState extends State<Home> {
       ),
       drawer: Drawer(child: ListView(
         children: [
-          ListTile(title: Text(localizations.homeMenuLogin), onTap: (){}),
+          ListTile(title: Text(localizations.homeMenuLogin), onTap: (){
+            Get.to(()=> Login());
+          }),
           ListTile(title: Text(localizations.homeMenuAbout), onTap: (){})
         ],
       ),),
