@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
       drawer: Drawer(child: ListView(
         children: [
           ListTile(title: Text(localizations.homeMenuLogin), onTap: (){
-            Get.to(()=> Login());
+            Get.toNamed("/login");
           }),
           ListTile(title: Text(localizations.homeMenuAbout), onTap: (){})
         ],

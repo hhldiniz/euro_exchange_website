@@ -21,7 +21,8 @@ class MyAppLocalizations {
       "homeMenuAbout": "About",
       "username": "Username",
       "password": "Password",
-      "formFieldRequired": "You need to provide this value"
+      "formFieldRequired": "You need to provide this value",
+      "createAccount": "Don't have an account ? Create one here."
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
@@ -32,7 +33,8 @@ class MyAppLocalizations {
       "homeMenuAbout": "Sobre",
       "username": "Usuário",
       "password": "Senha",
-      "formFieldRequired": "Você precisa inserir esse valor"
+      "formFieldRequired": "Você precisa inserir esse valor",
+      "createAccount": "Não tem uma conta ? Crie uma aqui."
     }
   };
 
@@ -56,6 +58,10 @@ class MyAppLocalizations {
   String get formFieldRequired =>
       _localizedValues[locale.languageCode]?['formFieldRequired'] ??
       "Value Error";
+
+  String get createAccount =>
+      _localizedValues[locale.languageCode]?['createAccount'] ??
+          "Value Error";
 }
 
 class MyAppLocalizationsDelegate

@@ -1,6 +1,6 @@
-import 'package:euro_exchange_api_website/controllers/login_form.dart';
 import 'package:euro_exchange_api_website/pages/home.dart';
-import 'package:euro_exchange_api_website/util/dependency_injector.dart';
+import 'package:euro_exchange_api_website/pages/login.dart';
+import 'package:euro_exchange_api_website/util/bindings/login_bindings.dart';
 import 'package:euro_exchange_api_website/util/localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +8,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
 void main() {
-  DependencyInjector.injectDependency(
-      [FormController()]);
   runApp(MyApp());
 }
 
@@ -27,7 +25,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      initialRoute: "/",
+      getPages: [
+        GetPage(name: "/", page: ()=> Home()),
+        GetPage(name: "/login", page: ()=>Login(), binding: LoginBindings())
+      ],
     );
   }
 }
