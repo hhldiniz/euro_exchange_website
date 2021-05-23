@@ -20,7 +20,8 @@ class MyAppLocalizations {
       "homeMenuLogin": "Login",
       "homeMenuAbout": "About",
       "username": "Username",
-      "password": "Password"
+      "password": "Password",
+      "formFieldRequired": "You need to provide this value"
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
@@ -30,7 +31,8 @@ class MyAppLocalizations {
       "homeMenuLogin": "Entrar",
       "homeMenuAbout": "Sobre",
       "username": "Usuário",
-      "password": "Senha"
+      "password": "Senha",
+      "formFieldRequired": "Você precisa inserir esse valor"
     }
   };
 
@@ -50,6 +52,10 @@ class MyAppLocalizations {
 
   String get password =>
       _localizedValues[locale.languageCode]?['password'] ?? "Value Error";
+
+  String get formFieldRequired =>
+      _localizedValues[locale.languageCode]?['formFieldRequired'] ??
+      "Value Error";
 }
 
 class MyAppLocalizationsDelegate

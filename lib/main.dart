@@ -8,7 +8,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
 void main() {
-  DependencyInjector.injectDependency([FormController()]);
+  DependencyInjector.injectDependency(
+      [FormController()]);
   runApp(MyApp());
 }
 

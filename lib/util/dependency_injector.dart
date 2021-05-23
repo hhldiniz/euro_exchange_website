@@ -4,7 +4,10 @@ import 'package:get/get.dart';
 class DependencyInjector {
   static injectDependency<T extends BaseController>(List<T> dependency) {
     dependency.forEach((BaseController element) {
-      Get.put(element, tag: element.tag, permanent: element.isPermanent);
+      if (element.lazy)
+        Get.lazyPut(() => element, tag: element.tag);
+      else
+        Get.put(element, tag: element.tag, permanent: element.isPermanent);
     });
   }
 

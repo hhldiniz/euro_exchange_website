@@ -1,9 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'base_controller.dart';
 
-class FormController extends BaseController{
-  TextEditingController usernameEditingController = TextEditingController();
-  TextEditingController passwordEditingController = TextEditingController();
+class FormController extends BaseController {
+
+  String? fieldIsValid(String value, String errorMessage) {
+    if (value.isEmpty) {
+      return errorMessage;
+    }
+    return null;
+  }
+
+  validate() {}
 
   @override
   bool get isPermanent => false;
@@ -12,4 +18,7 @@ class FormController extends BaseController{
   String get tag => Tag;
 
   static const String Tag = "FormController";
+
+  @override
+  bool get lazy => true;
 }
