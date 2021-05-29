@@ -1,6 +1,9 @@
 import 'package:euro_exchange_api_website/pages/home.dart';
 import 'package:euro_exchange_api_website/pages/login.dart';
+import 'package:euro_exchange_api_website/pages/signup.dart';
+import 'package:euro_exchange_api_website/util/bindings/home_bindings.dart';
 import 'package:euro_exchange_api_website/util/bindings/login_bindings.dart';
+import 'package:euro_exchange_api_website/util/bindings/signup_bindings.dart';
 import 'package:euro_exchange_api_website/util/localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,9 +29,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/",
+      initialBinding: HomeBindings(),
       getPages: [
-        GetPage(name: "/", page: ()=> Home()),
-        GetPage(name: "/login", page: ()=>Login(), binding: LoginBindings())
+        GetPage(name: "/", page: () => Home()),
+        GetPage(name: "/login", page: () => Login(), binding: LoginBindings()),
+        GetPage(
+            name: "/signup", page: () => Signup(), binding: SignupBindings())
       ],
     );
   }

@@ -21,8 +21,10 @@ class MyAppLocalizations {
       "homeMenuAbout": "About",
       "username": "Username",
       "password": "Password",
+      "passwordConfirmation": "Password confirmation",
       "formFieldRequired": "You need to provide this value",
-      "createAccount": "Don't have an account ? Create one here."
+      "createAccount": "Don't have an account ? Create one here.",
+      "signupFinishBtn": "Signup"
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
@@ -33,8 +35,10 @@ class MyAppLocalizations {
       "homeMenuAbout": "Sobre",
       "username": "Usuário",
       "password": "Senha",
+      "passwordConfirmation": "Confirmação de senha",
       "formFieldRequired": "Você precisa inserir esse valor",
-      "createAccount": "Não tem uma conta ? Crie uma aqui."
+      "createAccount": "Não tem uma conta ? Crie uma aqui.",
+      "signupFinishBtn": "Cadastrar"
     }
   };
 
@@ -55,13 +59,20 @@ class MyAppLocalizations {
   String get password =>
       _localizedValues[locale.languageCode]?['password'] ?? "Value Error";
 
+  String get passwordConfirmation =>
+      _localizedValues[locale.languageCode]?['passwordConfirmation'] ??
+      'Value Error';
+
   String get formFieldRequired =>
       _localizedValues[locale.languageCode]?['formFieldRequired'] ??
       "Value Error";
 
   String get createAccount =>
-      _localizedValues[locale.languageCode]?['createAccount'] ??
-          "Value Error";
+      _localizedValues[locale.languageCode]?['createAccount'] ?? "Value Error";
+
+  String get signupFinishBtn =>
+      _localizedValues[locale.languageCode]?['signupFinishBtn'] ??
+      'Value Error';
 }
 
 class MyAppLocalizationsDelegate

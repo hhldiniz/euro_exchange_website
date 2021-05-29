@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 class MaterialTextFormField extends StatelessWidget {
   final String? _labelText;
   final TextEditingController? _controller;
-  final FormFieldValidator _validator;
+  final FormFieldValidator? _validator;
   final String? _initialValue;
 
   MaterialTextFormField({controller, initialValue, labelText, validator})
@@ -20,7 +20,7 @@ class MaterialTextFormField extends StatelessWidget {
       controller: this._initialValue != null ? null : this._controller,
       validator: _validator,
       decoration:
-          InputDecoration(border: OutlineInputBorder(), labelText: _labelText),
+          InputDecoration(border: OutlineInputBorder(), labelText: _labelText,),
     );
   }
 }
