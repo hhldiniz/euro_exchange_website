@@ -18,6 +18,7 @@ class MyAppLocalizations {
               'Those values are obtained from the European Central Bank. '
               'Se more at the link',
       "homeMenuLogin": "Login",
+      "homeMenuApiKey": "Manage Api Keys",
       "homeMenuAbout": "About",
       "username": "Username",
       "password": "Password",
@@ -32,6 +33,7 @@ class MyAppLocalizations {
           'Esses valores são obtidos do Banco Central Europeu (European Central Bank). \n'
           'Veja mais no link',
       "homeMenuLogin": "Entrar",
+      "homeMenuApiKey": "Gerenciar Chaves de Api",
       "homeMenuAbout": "Sobre",
       "username": "Usuário",
       "password": "Senha",
@@ -73,6 +75,9 @@ class MyAppLocalizations {
   String get signupFinishBtn =>
       _localizedValues[locale.languageCode]?['signupFinishBtn'] ??
       'Value Error';
+
+  String get homeMenuApiKey =>
+      _localizedValues[locale.languageCode]?['homeMenuApiKey'] ?? 'Value Error';
 }
 
 class MyAppLocalizationsDelegate

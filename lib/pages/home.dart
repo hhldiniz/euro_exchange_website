@@ -22,14 +22,22 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("Euro Exchange Api"),
       ),
-      drawer: Drawer(child: ListView(
-        children: [
-          ListTile(title: Text(localizations.homeMenuLogin), onTap: (){
-            Get.toNamed("/login");
-          }),
-          ListTile(title: Text(localizations.homeMenuAbout), onTap: (){})
-        ],
-      ),),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+                title: Text(localizations.homeMenuLogin),
+                onTap: () {
+                  Get.toNamed("/login");
+                }),
+            ListTile(
+              title: Text(localizations.homeMenuApiKey),
+              onTap: () {},
+            ),
+            ListTile(title: Text(localizations.homeMenuAbout), onTap: () {}),
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Row(
