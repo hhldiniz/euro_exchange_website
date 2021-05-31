@@ -1,5 +1,7 @@
+import 'package:euro_exchange_api_website/pages/about.dart';
 import 'package:euro_exchange_api_website/pages/home.dart';
 import 'package:euro_exchange_api_website/pages/login.dart';
+import 'package:euro_exchange_api_website/pages/manage_api_keys.dart';
 import 'package:euro_exchange_api_website/pages/signup.dart';
 import 'package:euro_exchange_api_website/util/bindings/home_bindings.dart';
 import 'package:euro_exchange_api_website/util/bindings/login_bindings.dart';
@@ -34,7 +36,9 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/", page: () => Home()),
         GetPage(name: "/login", page: () => Login(), binding: LoginBindings()),
         GetPage(
-            name: "/signup", page: () => Signup(), binding: SignupBindings())
+            name: "/signup", page: () => Signup(), binding: SignupBindings()),
+        GetPage(name: "/about", page: ()=> About()),    
+        GetPage(name: "/manage_api_keys", page: ()=> ManageApiKeys())
       ],
     );
   }

@@ -1,4 +1,3 @@
-import 'package:euro_exchange_api_website/pages/login.dart';
 import 'package:euro_exchange_api_website/util/localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -32,9 +31,15 @@ class _HomeState extends State<Home> {
                 }),
             ListTile(
               title: Text(localizations.homeMenuApiKey),
-              onTap: () {},
+              onTap: () {
+                Get.toNamed("/manage_api_keys");
+              },
             ),
-            ListTile(title: Text(localizations.homeMenuAbout), onTap: () {}),
+            ListTile(
+                title: Text(localizations.homeMenuAbout),
+                onTap: () {
+                  Get.toNamed("/about");
+                }),
           ],
         ),
       ),

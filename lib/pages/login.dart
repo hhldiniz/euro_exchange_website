@@ -4,6 +4,7 @@ import 'package:euro_exchange_api_website/util/dependency_injector.dart';
 import 'package:euro_exchange_api_website/util/localizations.dart';
 import 'package:euro_exchange_api_website/widgets/material_text_form_field.dart';
 import 'package:euro_exchange_api_website/widgets/primary_button.dart';
+import 'package:euro_exchange_api_website/widgets/screen_cover.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,11 @@ class Login extends StatelessWidget {
     var _formKey = GlobalKey<FormState>();
 
     return Scaffold(
-      body: Column(
+        body: Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("img/coins.jpg"), fit: BoxFit.fill)),
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
@@ -95,6 +100,6 @@ class Login extends StatelessWidget {
           )
         ],
       ),
-    );
+    ));
   }
 }
