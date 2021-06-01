@@ -75,6 +75,7 @@ class Login extends StatelessWidget {
                                     horizontal: 16, vertical: 16),
                                 child: MaterialTextFormField(
                                   initialValue: "",
+                                  isPassword: true,
                                   focusColor: Colors.white,
                                   validator: (value) =>
                                       _loginFormController.fieldIsValid(value,
