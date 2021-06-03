@@ -24,7 +24,7 @@ class MyAppLocalizations {
       "password": "Password",
       "passwordConfirmation": "Password confirmation",
       "formFieldRequired": "You need to provide this value",
-      "createAccount": "Don't have an account ? Create one here.",
+      "createAccount": "Create account",
       "signupFinishBtn": "Signup"
     },
     "pt": {
@@ -39,7 +39,7 @@ class MyAppLocalizations {
       "password": "Senha",
       "passwordConfirmation": "Confirmação de senha",
       "formFieldRequired": "Você precisa inserir esse valor",
-      "createAccount": "Não tem uma conta ? Crie uma aqui.",
+      "createAccount": "Criar conta",
       "signupFinishBtn": "Cadastrar"
     }
   };

@@ -11,7 +11,7 @@ class PrimaryButton extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: ()=> _onPressed,
+      onPressed: ()=> _onPressed(),
       child: Text(_label),
       style: ButtonStyle(
           minimumSize:
