@@ -25,7 +25,9 @@ class MyAppLocalizations {
       "passwordConfirmation": "Password confirmation",
       "formFieldRequired": "You need to provide this value",
       "createAccount": "Create account",
-      "signupFinishBtn": "Signup"
+      "signupFinishBtn": "Signup",
+      "addApiKeyLabel": "Add Api Key",
+      "yourApiKeysLabel": "Your Api Keys"
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
@@ -40,7 +42,9 @@ class MyAppLocalizations {
       "passwordConfirmation": "Confirmação de senha",
       "formFieldRequired": "Você precisa inserir esse valor",
       "createAccount": "Criar conta",
-      "signupFinishBtn": "Cadastrar"
+      "signupFinishBtn": "Cadastrar",
+      "addApiKeyLabel": "Adicionar Chave de Api",
+      "yourApiKeysLabel": "Suas Chages de Api"
     }
   };
 
@@ -78,6 +82,13 @@ class MyAppLocalizations {
 
   String get homeMenuApiKey =>
       _localizedValues[locale.languageCode]?['homeMenuApiKey'] ?? 'Value Error';
+
+  String get addApiKeyLabel =>
+      _localizedValues[locale.languageCode]?['addApiKeyLabel'] ?? 'Value Error';
+
+  String get yourApiKeysLabel =>
+      _localizedValues[locale.languageCode]?['yourApiKeysLabel'] ??
+      'Value Error';
 }
 
 class MyAppLocalizationsDelegate

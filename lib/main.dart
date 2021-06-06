@@ -1,5 +1,7 @@
 import 'package:euro_exchange_api_website/pages/about.dart';
+import 'package:euro_exchange_api_website/pages/add_api_key.dart';
 import 'package:euro_exchange_api_website/pages/home.dart';
+import 'package:euro_exchange_api_website/pages/list_api_keys.dart';
 import 'package:euro_exchange_api_website/pages/login.dart';
 import 'package:euro_exchange_api_website/pages/manage_api_keys.dart';
 import 'package:euro_exchange_api_website/pages/signup.dart';
@@ -38,7 +40,9 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: "/signup", page: () => Signup(), binding: SignupBindings()),
         GetPage(name: "/about", page: ()=> About()),    
-        GetPage(name: "/manage_api_keys", page: ()=> ManageApiKeys())
+        GetPage(name: "/manage_api_keys", page: ()=> ManageApiKeys()),
+        GetPage(name: "/add_api_key", page: ()=> AddApiKeyPage()),
+        GetPage(name: "/my_api_keys", page: ()=> ListApiKeys()),
       ],
     );
   }
