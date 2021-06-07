@@ -27,7 +27,10 @@ class MyAppLocalizations {
       "createAccount": "Create account",
       "signupFinishBtn": "Signup",
       "addApiKeyLabel": "Add Api Key",
-      "yourApiKeysLabel": "Your Api Keys"
+      "yourApiKeysLabel": "Your Api Keys",
+      "newApiKeyNameLabel": "New Api key name",
+      "generateApiKeyButton": "Generate Key",
+      "generatedApiKey": "New Api Key"
     },
     "pt": {
       "apiPresentation": 'Euro Exchange é uma Api que ajuda você a conseguir '
@@ -44,7 +47,10 @@ class MyAppLocalizations {
       "createAccount": "Criar conta",
       "signupFinishBtn": "Cadastrar",
       "addApiKeyLabel": "Adicionar Chave de Api",
-      "yourApiKeysLabel": "Suas Chages de Api"
+      "yourApiKeysLabel": "Suas Chages de Api",
+      "newApiKeyNameLabel": "Novo nome de chave de Api",
+      "generateApiKeyButton": "Gerar Chave",
+      "generatedApiKey": "Nova chave de Api"
     }
   };
 
@@ -89,6 +95,18 @@ class MyAppLocalizations {
   String get yourApiKeysLabel =>
       _localizedValues[locale.languageCode]?['yourApiKeysLabel'] ??
       'Value Error';
+
+  String get newApiKeyNameLabel =>
+      _localizedValues[locale.languageCode]?["newApiKeyNameLabel"] ??
+      "Value Error";
+
+  String get generateApiKeyButton =>
+      _localizedValues[locale.languageCode]?['generateApiKeyButton'] ??
+      "Value Error";
+
+  String get generatedApiKey =>
+      _localizedValues[locale.languageCode]?['generatedApiKey'] ??
+      "Value Error";
 }
 
 class MyAppLocalizationsDelegate

@@ -9,6 +9,7 @@ class MaterialTextFormField extends StatelessWidget {
   final Color? _focusColor;
   final TextInputType? _inputType;
   final bool _isPassword;
+  final bool _editable;
 
   MaterialTextFormField(
       {controller,
@@ -17,14 +18,16 @@ class MaterialTextFormField extends StatelessWidget {
       validator,
       focusColor,
       inputType,
-      isPassword = false})
+      isPassword = false,
+      editable = true})
       : this._controller = controller,
         this._initialValue = initialValue,
         this._labelText = labelText,
         this._validator = validator,
         this._focusColor = focusColor,
         this._inputType = inputType,
-        this._isPassword = isPassword;
+        this._isPassword = isPassword,
+        this._editable = editable;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,7 @@ class MaterialTextFormField extends StatelessWidget {
       controller: this._initialValue != null ? null : this._controller,
       validator: _validator,
       obscureText: _isPassword,
+      enabled: _editable,
       style: TextStyle(color: _focusColor ?? Theme.of(context).accentColor),
       keyboardType: _inputType ?? TextInputType.name,
       decoration: InputDecoration(
