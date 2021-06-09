@@ -18,6 +18,7 @@ dependencies:
   url_launcher: ^6.0.4
   get: ^4.1.4
   dio: ^4.0.0
+  crypto: ^3.0.1
 
 
 dev_dependencies:

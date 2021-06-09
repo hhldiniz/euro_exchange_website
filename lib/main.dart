@@ -5,6 +5,7 @@ import 'package:euro_exchange_api_website/pages/list_api_keys.dart';
 import 'package:euro_exchange_api_website/pages/login.dart';
 import 'package:euro_exchange_api_website/pages/manage_api_keys.dart';
 import 'package:euro_exchange_api_website/pages/signup.dart';
+import 'package:euro_exchange_api_website/util/bindings/add_api_key_bindings.dart';
 import 'package:euro_exchange_api_website/util/bindings/home_bindings.dart';
 import 'package:euro_exchange_api_website/util/bindings/login_bindings.dart';
 import 'package:euro_exchange_api_website/util/bindings/signup_bindings.dart';
@@ -39,10 +40,13 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/login", page: () => Login(), binding: LoginBindings()),
         GetPage(
             name: "/signup", page: () => Signup(), binding: SignupBindings()),
-        GetPage(name: "/about", page: ()=> About()),    
-        GetPage(name: "/manage_api_keys", page: ()=> ManageApiKeys()),
-        GetPage(name: "/add_api_key", page: ()=> AddApiKeyPage()),
-        GetPage(name: "/my_api_keys", page: ()=> ListApiKeys()),
+        GetPage(name: "/about", page: () => About()),
+        GetPage(name: "/manage_api_keys", page: () => ManageApiKeys()),
+        GetPage(
+            name: "/add_api_key",
+            page: () => AddApiKeyPage(),
+            binding: AddApiKeyBindings()),
+        GetPage(name: "/my_api_keys", page: () => ListApiKeys()),
       ],
     );
   }
