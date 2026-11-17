@@ -7,8 +7,8 @@ class RequestController extends BaseController {
 
   RequestController() {
     _dio.options.baseUrl = "https://european-exchange-api.herokuapp.com";
-    _dio.options.connectTimeout = 10000;
-    _dio.options.receiveTimeout = 10000;
+    _dio.options.connectTimeout = const Duration(seconds: 10);
+    _dio.options.receiveTimeout = const Duration(seconds: 10);
   }
 
   Future<Response<T>> makeRequest<T>(HttpMethod httpMethod, String path,
